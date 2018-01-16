@@ -1,0 +1,5 @@
+/src/
+/pkg/
+/dbeaver*.tar.gz
+/dbeaver*.tar.xz
+*.swp
