@@ -1,4 +1,6 @@
-# Maintainer: John Sivak <jsivak@winterjewel.com>
+# Copied and modified from https://aur.archlinux.org/packages/dbeaver-ee/
+# Maintainer: Andreas Linz <klingt.net+aur@gmail.com>
+# Original Maintainer: John Sivak <jsivak@winterjewel.com>
 # Previous Maintainer: Joseph Post <joe@jcpst.com>
 # Previous Maintainer: Stephan Wienczny <stephan@wienczny.de>
 
