@@ -2,4 +2,5 @@
 /pkg/
 /dbeaver*.tar.gz
 /dbeaver*.tar.xz
+/dbeaver*.pkg.tar
 *.swp
