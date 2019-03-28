@@ -5,7 +5,7 @@
 # Previous Maintainer: Stephan Wienczny <stephan@wienczny.de>
 
 pkgname=dbeaver
-pkgver=6.0.0
+pkgver=6.0.1
 pkgrel=1
 pkgdesc="A universal database tool for developers and database administrators. Enterprise Edition includes NoSQL database support"
 arch=('i686' 'x86_64')
@@ -15,24 +15,17 @@ depends=('java-runtime>=1.6' 'gtk2' 'gtk-update-icon-cache')
 install=dbeaver.install
 
 source=(dbeaver.desktop dbeaver.install)
-source_i686=(https://dbeaver.jkiss.org/files/${pkgver}/dbeaver-ce-${pkgver}-linux.gtk.x86.tar.gz)
 source_x86_64=(https://dbeaver.jkiss.org/files/${pkgver}/dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz)
 sha256sums=('d1365a1e1a9a7b3949fc1b9e9928e93b7d8b3d04b5d0eee7c37eaaa362466c47'
             'a54659b53f1966395f7e296d448c42e1165ec38f5db20181a9e294f775e1c43b')
-sha256sums_i686=('32954967f2dae66ff9b6438dc7b59b1055b94cdd2175b3fc9e1e0cdd88494975')
-sha256sums_x86_64=('b9b722ab0c5ac6099092c43a04426e84bd9b857e646a1f7fe987fb09efdeffec')
+sha256sums_x86_64=('0e917d7e88598251cdbd93b9d88df79ca3b185875f1a494cb7f8b1edb2de9fa4')
 
-noextract=("dbeaver-ce-${pkgver}-linux.gtk.x86.tar.gz"
-           "dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz")
+noextract=("dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz")
 
 prepare() {
     mkdir -p $srcdir/$pkgname
     cd $srcdir/$pkgname
-    if [ "$CARCH" = "x86_64" ]; then
-        tar -xf "$srcdir/dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz"
-    else
-        tar -xf "$srcdir/dbeaver-ce-${pkgver}-linux.gtk.x86.tar.gz"
-    fi
+    tar -xf "$srcdir/dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz"
 }
 
 package() {
