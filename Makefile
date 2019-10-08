@@ -8,8 +8,8 @@ build:
 	mksrcinfo
 
 install:
-	sudo pacman -U dbeaver*.tar.xz
+	sudo pacman -U dbeaver*.tar.zst
 
 clean:
 	rm -rf src pkg
-	rm -f dbeaver*.tar.gz dbeaver*.tar.xz
+	rm -f dbeaver*.tar.gz dbeaver*.tar.xz dbeaver*.tar.zst
